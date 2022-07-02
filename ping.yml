@@ -2,6 +2,8 @@
 - hosts: all
   tasks:
     - name: test connection
+      become: yes
+      become_user: root
       ping:
       register: message
     - name: print debug message
