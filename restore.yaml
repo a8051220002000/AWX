@@ -1,0 +1,12 @@
+---
+apiVersion: awx.ansible.com/v1beta1
+kind: AWXRestore
+metadata:
+  name: awx2
+  namespace: awx2
+spec:
+  deployment_name: awx-restore
+  backup_pvc: pv-migrate2
+  # backup_dir: '/backups/tower-openshift-backup-2023-10-26-085926'
+  backup_dir: '/backups/tower-openshift-backup-2023-10-26-094559'
+  # backup_name: awxbackup-2021-04-22

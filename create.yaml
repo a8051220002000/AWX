@@ -1,0 +1,17 @@
+---
+apiVersion: awx.ansible.com/v1beta1
+kind: AWX
+metadata:
+  name: awx
+  namespace: awx
+spec:
+  service_type: nodeport
+  postgres_storage_class: cephrbd
+  postgres_storage_requirements:
+    requests:
+      storage: 1Gi
+    limits:
+      storage: 80Gi
+  postgres_extra_args:
+    - "-c"
+    - "max_connections=1000"
