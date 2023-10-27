@@ -6,5 +6,5 @@ metadata:
   namespace: awx
 spec:
   deployment_name: awx
-  # backup_pvc: 'awx-backup1'
+  # backup_pvc: 'awx-backup1' #此步驟如果要客製化，要手動新建
   clean_backup_on_delete: true
